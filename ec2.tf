@@ -78,7 +78,6 @@ resource "aws_instance" "ec2" {
   instance_type = "t3.micro"
   subnet_id     = aws_subnet.public-sub-a.id
   vpc_security_group_ids = [aws_security_group.ec2-security-group.id]
-  disable_api_termination = true # AwsCli로 EC2를 종료를 허용할려 False로 설정 
 
   # 사용자 데이터
   user_data = <<-EOF
